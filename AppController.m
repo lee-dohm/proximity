@@ -183,8 +183,7 @@
 	{
 		device = [NSKeyedUnarchiver unarchiveObjectWithData:deviceAsData];
 		[device retain];
-		[deviceName setStringValue:[NSString stringWithFormat:@"%@ (%@)",
-									[device getName], [device getAddressString]]];
+		[deviceName setStringValue:[NSString stringWithFormat:@"%@ (%@)", [device name], [device addressString]]];
 		
 		if( [self isInRange] )
 		{			
@@ -306,8 +305,8 @@
 	[device retain];
 	
 	[deviceName setStringValue:[NSString stringWithFormat:@"%@ (%@)",
-								[device getName],
-								[device getAddressString]]];    
+								[device name],
+								[device addressString]]];
 }
 
 - (IBAction)checkConnectivity:(id)sender
